@@ -18,3 +18,7 @@ class Master:
 	# control of the Master
 	groovers = []
 
+	def __init__(self):
+		student_tix = 0
+		adult_tix = 0
+
