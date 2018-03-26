@@ -1,5 +1,11 @@
 class Master:
 
+	#########
+	###
+	## He who is called the Master, the wielder of ticketing power
+	#
+	#
+
 	# Amt currently in posetion
 	student_tix = 0
 	adult_tix = 0

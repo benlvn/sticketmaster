@@ -1,5 +1,11 @@
 class Groover:
 
+	#########
+	###
+	## Data related to each Groover's ticket count
+	#
+	#
+
 	name = ""
 
 	# Number of tickets in possession
