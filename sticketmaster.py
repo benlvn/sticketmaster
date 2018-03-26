@@ -1,13 +1,12 @@
-print("   _____ __  _      __        __                       __           ")
-print("  / ___// /_(_)____/ /_____  / /_____ ___  ____ ______/ /____  _____")
-print("  \__ \/ __/ / ___/ //_/ _ \/ __/ __ `__ \/ __ `/ ___/ __/ _ \/ ___/")
-print(" ___/ / /_/ / /__/ ,< /  __/ /_/ / / / / / /_/ (__  ) /_/  __/ /    ")
-print("/____/\__/_/\___/_/|_|\___/\__/_/ /_/ /_/\__,_/____/\__/\___/_/     ")
-print("                                                                    ")
-print(" ")
+from interface import Interface
 
-print("### Main menu")
-print("1. Inventory")
-print("2. Give ticekts")
-print("3. New round")
-response = process_input("> ")
+def main():
+	view = Interface()
+	view.welcome_message()
+	view.welcome_message()
+	view.welcome_message()
+
+  
+
+if __name__ == '__main__':
+  main()

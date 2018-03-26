@@ -16,14 +16,9 @@ class Interface:
 	state = "welcome"
 
 	# Maps states to their functions
-	func_map = {"welcome": welcome_message(),
-				"main": main_menu(),
-				"inventory": inventory()}
+	func_map = {}
 
-	def __init__():
-		master = None
-
-	def welcome_message():
+	def welcome_message(self):
 		print("   _____ __  _      __        __                       __           ")
 		print("  / ___// /_(_)____/ /_____  / /_____ ___  ____ ______/ /____  _____")
 		print("  \__ \/ __/ / ___/ //_/ _ \/ __/ __ `__ \/ __ `/ ___/ __/ _ \/ ___/")
@@ -32,23 +27,20 @@ class Interface:
 		print("                                                                    ")
 		print(" ")
 
-	def process_input():
+	def process_input(self):
 		user_input = input("> ")
 
-		if(user_input = 'q'):
+		if(user_input == 'q'):
 			state = "quit"
 
-	def run_program():
+	def run_program(self):
 		while(state != "quit"):
 			func_map[state]()
 
 		print("Goodbye!")
 		return
 
-
-
-
-	def main_menu():
+	def main_menu(self):
 		print("### Main menu")
 		print("1. Inventory")
 		print("2. Give ticekts")
@@ -61,7 +53,7 @@ class Interface:
 		elif(response == '3'):
 			state = "quit"
 
-	def inventory():
+	def inventory(self):
 		print("### Inventory")
 		print("Master inventory:")
 		print("%d student", master.student_tix)
@@ -74,6 +66,14 @@ class Interface:
 			state = "quit"
 		elif(response == '3'):
 			state = "quit"
+
+	def __init__(self):
+		master = None
+		self.func_map["welcome"] = self.welcome_message
+		self.func_map["main"] = self.main_menu
+		self.func_map["inventory"] = self.inventory
+
+
 
 
 
