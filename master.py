@@ -25,6 +25,11 @@ class Master:
 				return True
 		return False
 
+	def get_groover(self, name):
+		for groover in self.groovers:
+			if groover.name == name:
+				return groover
+
 
 	def __init__(self):
 		student_tix = 0
