@@ -13,7 +13,10 @@ class Groover:
 	adult_tix = 0
 
 	# Number of tickets sold
-	agg_student = 0
-	agg_adult = 0
+	student_sold = 0
+	adult_sold = 0
+
+	def __init__(self, name):
+		self.name = name
 
 
